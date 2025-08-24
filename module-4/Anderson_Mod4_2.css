@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+    background-color:rgb(222, 45, 150);
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10%;
+   
+}
+#image-gallery > div {
+    border: 2px;
+    border-style: dashed;
+    border-color: white;
+}
+h3 {
+    text-align: center;
+    background-color:rgb(180, 0, 255);
+}
+figure {
+    text-align: center;
+}
+figcaption {
+    font-style: italic;
+    font-size: .75em;
+    background-color:rgb(15, 225, 120);
+    text-align: center;
+}
+p {
+    text-align: right;
+    float: right;
+   
+}
+a {
+    text-decoration: none;
+    float: right;
+    color: blue;
+    margin-top: 200px;
+}
+a:hover {
+    text-decoration: underline;
+    text-align: right;
+} 
+a:visited {
+    text-align: right;
+    color:rgb(180, 0, 255);
+}
