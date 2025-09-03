@@ -1,0 +1,19 @@
+//row visible on all pages-(home)  (about me.)		(hobbies)
+ 		  	    |	      |	      	   	   |
+	[Home Page/Landing Page]      |	       	   	   |
+		|		[About Me Page]	    	   |
+		|			|       	   |
+		|			|     	      [Hobbies Page]
+(Displays Images of chosen individual   | 		    |
+-Gives brief introduction		|		    |
+-Lists accomplishments                  |		    |
+-images related to goals)		|		    |
+				(Displays Q&A answers	    |
+				-provides a detailed 	    |
+				description of chosen 	    |
+				individual		    |
+				-shows portrait)	    |
+							(Displays hobbie description 
+							and Q&A answers
+							-provides images of chosen hobby
+							
