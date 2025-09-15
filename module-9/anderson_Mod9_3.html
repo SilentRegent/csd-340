@@ -1,0 +1,50 @@
+<!-- 
+    Name: Zachary Anderson
+    Assignment: 9.3
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>CSD 340 Development with HTML and CSS</title>
+		<script>
+			//creates variables for words being revealed by buttons
+			var firstVariableValue = "synthetic";
+			var secondVariableValue = "synthetic";
+			var thirdVariableValue = "artificial person";
+			var fourthVariableValue = "synthetic";
+			//creates variable for spans to use as ID
+			function replaceFirst() {
+				document.getElementById("span1").innerHTML = firstVariableValue
+			}
+			function replaceSecond() {
+				document.getElementById("span2").innerHTML = secondVariableValue
+			}
+			function replaceThird() {
+				document.getElementById("span3").innerHTML = thirdVariableValue
+			}
+			function replaceFourth() {
+				document.getElementById("span4").innerHTML = fourthVariableValue
+			}
+		</script>
+	
+	
+	
+	</head>
+	<body>
+		<h1>Assignment 9.3:JavaScript - Part 1</h1>
+		<h2>Aliens: Script Dialogue - Meeting Bishop the Synthetic</h2>
+		<p class="dialogue"> 
+			Ripley : You never said anything about an <span id="span1">____</span> being here: why not?</p>
+		<p> Burke: Well, it didn't occur to me. It's just policy to have a <span id="span2">____</span> on board.</p>
+		<p>Bishop: I prefer the term <span id="span3">____</span> myself. Is there a problem?</p>
+		<p>Burke: A <span id="span4">____</span> malfunctioned on her last trip out. Some deaths were involved.</p>
+		<p>
+			
+			<!--creates buttons to reveal span values-->
+			<button type="button" onclick= "replaceFirst()">Reveal 1st</button>
+			<button type="button" onclick= "replaceSecond()">Reveal 2nd</button>
+			<button type="button" onclick= "replaceThird()">Reveal 3rd</button>
+			<button type="button" onclick= "replaceFourth()">Reveal 4th</button>
+		</p>
+	</body>
+</html>
