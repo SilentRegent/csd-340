@@ -1,0 +1,43 @@
+<!--
+Zachary Anderson
+9/27/25
+Mod10.3
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSD 340 Web Development with HTML and CSS
+        </title>
+        <script>
+            function changeImage(imageName, newSrc) {
+                document.images[imageName].src = newSrc;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            Assignment 10.3: JavaScript - Part 2
+        </h1>
+        <div>
+            <h2>Click to see Gandalf Assume the role of Saruman!</h2>
+            <a href="#" onclick="changeImage('gandalf', 'gandalf-the-white.jpg'); return false;">
+                <img id="gandalf" src="gandalf-the-grey.jpg" alt="gandalf-the-white"
+                style="width: 200px; height: 300px;">
+            </a>
+        </div>
+        <br />
+        <div>
+            <h2>Click to see Anakin Fall to the Dark Side!</h2>
+            <a href="#" onclick="changeImage('anakin', 'darth_vader.jpg'); return false;">
+                <img id="anakin" src="Anakin_Skywalker_RotS.jpg" alt="anakin_skywalker"
+                style="width: 200px; height: 300px;">
+            </a>
+        </div>
+        
+    </body>
+    <footer>
+        <a href="silentregent.github.io/csd-340/" style="float: right; text-decoration: none;">Home Page</a>
+    </footer>
+</html>
