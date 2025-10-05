@@ -1,0 +1,154 @@
+<!--
+Zachary Anderson
+Mod 11.2
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSD 340 Web Development with HTML and CSS</title>
+        
+        <style>
+            body {
+                font-family: sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: flex-start;
+                
+            }
+            #buttonContainer {
+                margin-bottom: auto;
+                
+
+            }
+            button {
+                background-color: aquamarine;
+                border-radius: 50%;
+                height: 130px;
+                width: 130px;
+                
+                
+            }
+            button:hover {
+                background-color: aqua;
+            }
+            #addmessage  {
+                color: lightgreen;
+                background-color: black;
+                border-radius: 8px;
+                max-width: fit-content;
+                text-transform: capitalize;
+                
+                
+            }
+            #deletemessage {
+                color: red;
+                background-color: black;
+                border-radius: 8px;
+                max-width: fit-content;
+                text-transform: capitalize;
+            }
+           
+            input {
+                font-style: italic;
+                margin-bottom: 10px;
+                border-radius: 8px;
+                width: 400px;
+                height: 30px;
+            
+            }
+            ol {
+                background-color: beige;
+                text-transform: capitalize;
+            }
+            li {
+                padding: 8px;
+                border-bottom: 1px solid black;
+                
+            }
+            footer {
+                position: fixed;
+                bottom: 0;
+                padding: 5px;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+        <h2>What Do You Wanna Do Today?</h2>
+        <!--Input box for user to add to to-do list-->
+        <input type="text" id="textInput" placeholder="Add to To-Do List Here......">
+        <!--Buttons-->
+        <div id="buttonContainer">
+            <button id="add">Add</button>
+            <button id="delete">Delete Last Entry</button>
+            <button id="display">Display</button>
+        </div>
+        <ol id="inputs"></ol>
+        <p id="addmessage"></p> <!--For updates-->
+        <p id="deletemessage"></p> 
+
+        <script>
+            let inputs = [];
+            //variables
+            const input = document.getElementById("textInput");
+            const list = document.getElementById("inputs")
+            const addmessage = document.getElementById("addmessage");
+            const deletemessage = document.getElementById("deletemessage");
+
+            document.getElementById("add").onclick = function() {
+                if(input.value.trim() !== "") {
+                    inputs.push(input.value);
+
+               
+
+                    addmessage.textContent = `Added: "${input.value}" to To-Do List`;
+                    setTimeout(() => addmessage.textContent = "", 3000); //removes update message after 3 seconds
+                    input.value = "";                
+                
+                
+                }
+            };
+
+      
+
+            document.getElementById("delete").onclick = function() {
+                if (inputs.length > 0) {
+                    const removed = inputs.pop(); //Deletes last item on to-do list using pop
+                    deletemessage.textContent = `Deleted: "${removed}" From To-Do List`; //Update User Which Item was Deleted
+                    setTimeout(() => deletemessage.textContent = "", 3000); 
+                }
+                //updates list display
+                list.innerHTML = "";
+                inputs.forEach((entry, index) => {
+                    const li = document.createElement("li");
+                    li.textContent = entry;
+                    list.appendChild(li);
+
+            
+                });
+            };
+
+            document.getElementById("display").onclick = function() {
+                list.innerHTML = "";
+                inputs.forEach((entry, index) => {
+                    const li = document.createElement("li");
+                    li.textContent = entry;
+                    list.appendChild(li);
+
+
+                
+                });
+            
+            };
+        </script>
+        <footer>
+            <a href="https://silentregent.github.io/csd-340/">Back to csd-340...</a>
+        </footer>
+    </body>
+    
+</html>
