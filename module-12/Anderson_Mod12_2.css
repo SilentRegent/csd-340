@@ -1,0 +1,73 @@
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+#container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+div.left, div.right {
+    width: 45%;
+
+}
+div.last {
+    width: 100%;
+   
+    float: right;
+}
+button {
+    border-radius: 45%;
+    font-weight: 400;
+    padding: 2%;
+}
+button:hover {
+    background-color: red;
+}
+#homeButton {
+    border-radius: 10%;
+    padding: 1%;
+}
+hr {
+    border: solid 1px red;
+    border-radius: 8px;
+}
+h3 {
+    font-weight: 500;
+}
+li {
+    font-weight: 300;
+}
+div.left ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+
+}
+div.left  {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+   
+    
+}
+div.right  {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: upper-roman inside;
+    
+    
+}
+a {
+    text-decoration: none;
+    float: right;
+}
+a:hover {
+    text-decoration: underline;
+}
+.last {
+    text-align: center;
+    padding-right: 80px;
+}

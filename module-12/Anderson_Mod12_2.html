@@ -1,0 +1,102 @@
+<!--
+Zachary Anderson
+Module12.2
+
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>CSD 340 Web Development with HTML and CSS</title>
+        <link rel="stylesheet" href="Anderson_Mod12_2.css">
+    </head>
+    <body>
+        
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        
+        <div id="container">
+            
+
+            <div class="left">
+                <h3>Top 10 Favorite Books </h3>
+                <div id="buttonContainer">
+                    <button id="toptobottom">Top to Bottom</button>
+                    <button id="bottomtotop">Bottom to Top</button>
+                </div>
+                <hr>
+                <ol>
+                    
+                    <li>1984</li>
+                    <li>The Lion, the Witch, and the Wardrobe</li>
+                    <li>Hell Divers</li>
+                    <li>Columbus Day</li>
+                    <li>Percy Jackson and the Lightning Thief</li>
+                    <li>The Fellowship of the Ring</li>
+                    <li>Ender's Game</li>
+                    <li>The Hunger Games</li>
+                    <li>Sunrise on the Reaping</li>
+                    <li>Harry Potter and the Prisoner of Azkaban</li>
+
+                </ol>
+            </div> 
+            <div class="right">
+                <h3>5 Things I've Learned Since the Course Started</h3>
+                <ul>
+                    <li>How complicated and simple creating a website can be.</li>
+                    <li>My previous really did help when switching languages.</li>
+                    <li>I enjoy coding in html, it is very straight forward.</li>
+                    <li>CSS files are fun to mess around with and stretch the limits.</li>
+                    <li>I enjoy these assignments based around following directions, it allows for easy grasp of the task.</li>
+                </ul>
+            
+            </div>
+            <div class="last">
+            
+             <button id="homeButton">Home Page</button>
+            
+            </div>
+        </div>
+        
+        <script>
+            //collect li from top favorite books
+            const olList =document.querySelectorAll("ol li");
+
+            //convert list to array
+            let ol = Array.from(olList).map(item => item.textContent)
+
+            const descendingBtn = document.getElementById("toptobottom");
+            const ascendingBtn = document.getElementById("bottomtotop");
+            //added this extra button to practice javascript
+            const homeButton = document.getElementById("homeButton");
+
+
+            //top to bottom function
+            function descending() {
+                ol.sort().reverse();
+                updateList();
+            }
+            //bottom to top function
+            function ascending() {
+                ol.sort();
+                updateList();
+            }
+            //update ol list function
+            function updateList() {
+                const olChunk = document.querySelector("ol");
+                olChunk.innerHTML = "";
+                ol.forEach(book => {
+                    const li = document.createElement("li");
+                    li.textContent = book;
+                    olChunk.appendChild(li);
+                });
+            }
+            descendingBtn.addEventListener("click", descending);
+            ascendingBtn.addEventListener("click", ascending);
+            //added this extra button link to practice javascript
+            homeButton.addEventListener("click", function() {
+                window.location.href = "https://silentregent.github.io/csd-340/";
+            });
+        </script>
+    </body>
+</html>
